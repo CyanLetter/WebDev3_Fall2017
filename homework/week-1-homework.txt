@@ -1,0 +1,23 @@
+This week we're all going to make some changes to each others' repositories.
+
+Part 1 - make your own fork of the circus starter template
+
+- Fork the Circus Starter repository (https://github.com/CreativeCircus/circus-starter)
+
+- Edit package.json to include your name instead of Chris'.
+
+- Commit your changes to your own fork.
+
+Now you have a personal copy of the starter template, that you can edit for your own needs.
+
+Part 2 - make a pull request in everyone elses repositories
+
+- Fork each demo project that your classmates made in today's class.
+
+- Make a new branch in each of those forks.
+
+- Change some stuff. Leave a nice message. Add some CSS to make the site prettier.
+
+- Make a pull request to merge those changes back into your classmates' repositories.
+
+- When people make pull requests in your repository, accept or deny them at your discretion. Fix any merge conflicts that may arise.
