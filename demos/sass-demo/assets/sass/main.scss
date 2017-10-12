@@ -1,0 +1,125 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+/* 0. Variables, mixins, etc ================================= */
+
+@mixin mobile {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+$overcast-color: #ffffff;
+$snow-color: #000000;
+
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	letter-spacing: 0.1em;
+	background-size: cover;
+	background-position: center;
+
+	&.overcast {
+		color: $overcast-color;
+		background-image: url(../img/mountain.jpg);
+	}
+
+	&.snow {
+		color: black;
+		background-image: url(../img/snow.jpg);
+	}
+}
+
+
+/* 2. Content ================================= */
+
+h1 {
+	font-size: 6em;
+	font-weight: 100;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.2em;
+	margin: 0.2em auto;
+}
+
+.temperature {
+	&:after {
+		content: '\00B0';
+		font-size: 0.8em;
+		vertical-align: top;
+		position: absolute;
+	}
+}
+
+#today {
+	text-align: center;
+	padding: 40px;
+	font-size: 16px;
+}
+
+#five-day-forecast {
+	padding: 0 20px;
+	font-size: 10px;
+
+	li {
+		border-top: 1px solid white;
+		padding: 10px;
+
+		h1 {
+			margin: 0 10px;
+		}
+
+		h2 {
+			margin-top: 5px;
+			min-width: 100px;
+		}
+
+		h1, h2 {
+			display: inline-block;
+			vertical-align: top;
+
+			@include mobile {
+				display: block;
+				margin: 0;
+			}
+		}
+
+		&:last-child {
+			border-bottom: 1px solid white;
+		}
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+	}
+}
+
+.rotated {
+	transform: rotate(35deg);
+}
+
+
