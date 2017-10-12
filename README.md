@@ -9,3 +9,11 @@ Remember to grab the [Starter Template](https://github.com/CreativeCircus/circus
 ## People
 
 Dakota Ling :star:
+
+Lizz Lanius
+
+Erin Kahn
+
+Cassandra Desrosiers
+
+Patricia McLaurin
