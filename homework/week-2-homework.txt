@@ -1,0 +1,30 @@
+Make a fake download page for an app. The Firefox download page is a good example of the format I'm expecting:
+
+https://www.mozilla.org/en-US/firefox/new/
+
+The site itself should be a simple landing page to download a fake app, built using sass. At the minimum, your Sass file should contain examples of the following:
+
+The page itself must be responsive and should include 2 main sections.
+
+- Nested style rules. No specific number here, just try to nest things in a way that is efficient and makes sense to you. This is one of Sass' handiest features.
+- At least two variables, one for a primary page color, one for a secondary accent or text color.
+- At least one inline media query. Bonus points if you use a mixin for this.
+- At least one partial Sass file included in your main file.
+- At least one mixin. This can be as simple or complex as you like. While the breakpoint mixin we discussed in class is useful, I encourage you to look online for other sass mixins as well.
+
+Section 1 should contain:
+
+- An icon (can be generic)
+- Call-to-action text
+- A download button
+- A link that goes somewhere else (privacy or other downloads page)
+
+Section 2 should contain three columns, each with a module that lists some great feature of your fake app. Each module should include:
+
+- An icon
+- A title
+- A short description
+
+You will be graded on your sass file as much as the site itself. Keep in mind that the main goal of this assignment is to get you comfortable using Sass on a regular basis, so focus your effors on writing effective, reusable styles. I will look at your Sass files in future projects, but this is the best time to ask about best practices and figure out the parts that you like using. There are about a million bad habits you can develop while using sass, so let's try to address them early.
+
+Submit a link to the project on github.
