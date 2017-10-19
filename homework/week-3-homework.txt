@@ -1,0 +1,11 @@
+Week 3 Homework
+
+Create an image gallery demonstrating what we learned about components and transforms.
+
+Create a new project using the Circus template. Commit it to a github repository. Remember, commit early and often.
+
+Design an gallery containing eight images. You can choose your own or use placeholders from lorempixel.com. The gallery should be responsive to be usable and look good from mobile to desktop.
+
+Your images should have hover states that animate the image and reveal more elements. The things revealed should include at least one text element and three button variations. This can include descriptions, author names and icons, social and download buttons, etc. All elements should transition on using some kind of transform, so play around with the different kinds of transforms and include some variety. Don't just use a translateY to reveal everything. Use Dribbble for inspiration if necessary.
+
+Design the image containers and the elements within in an extendable, component-based way. You will be evaluated based on your css structure as much as the playfulness of the transitions.

@@ -1,0 +1,158 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+1. Variables, Mixins, etc.
+2. Main Layout
+3. Components
+4. Content
+
+==============================================
+*/
+/* 1. Variables, Mixins, etc. ================================= */
+/* 2. Main Layout ================================= */
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #fff;
+  font-family: Helvetica, Arial, sans-serif; }
+
+article {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+section {
+  padding: 10px 20px;
+  margin: 0 auto; }
+
+h1 {
+  font-size: 2.4em;
+  font-weight: 600; }
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 600; }
+
+h3 {
+  font-size: 1.2em;
+  color: #555; }
+
+p {
+  line-height: 1.25em; }
+
+/* 3. Components ================================= */
+.button, .button-cta {
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  background: #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s; }
+  .button:hover, .button-cta:hover {
+    background: #aaa; }
+
+.button-cta {
+  padding: 20px 40px;
+  font-size: 1.5em;
+  font-weight: 600;
+  background: #55ff00; }
+  .button-cta:hover {
+    background: #55dd00; }
+
+.media, .media-right, .media-center {
+  display: flex;
+  align-items: flex-start; }
+  .media .media-figure, .media-right .media-figure, .media-center .media-figure {
+    margin-right: 1em; }
+  .media .media-content, .media-right .media-content, .media-center .media-content {
+    flex: 1; }
+
+.media-right {
+  flex-direction: row-reverse; }
+  .media-right .media-figure {
+    margin: 0 0 0 1em; }
+
+.media-center {
+  align-items: center; }
+
+/* 4. Content ================================= */
+header > img {
+  width: 100%;
+  min-height: 200px;
+  object-fit: cover; }
+
+header section {
+  max-width: 600px; }
+
+.author {
+  margin: 20px auto 10px; }
+  .author img {
+    border-radius: 80px 80px 80px 80px; }
+
+.post-body {
+  max-width: 600px; }
+
+.post-image {
+  position: relative;
+  width: 100%;
+  margin: 10px auto;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; }
+  .post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s; }
+  .post-image figcaption {
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    bottom: 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    transition: 0.3s;
+    transform: translateY(100%); }
+  .post-image:hover figcaption {
+    transform: translateY(0); }
+  .post-image:hover img {
+    transform: scale(1.2); }
+
+.sharing {
+  display: inline-flex;
+  padding: 10px 0; }
+  .sharing .media, .sharing .media-right, .sharing .media-center {
+    margin-right: 1em; }
+    .sharing .media .media-figure, .sharing .media-right .media-figure, .sharing .media-center .media-figure {
+      margin-right: 0.2em; }
+    .sharing .media .media-content, .sharing .media-right .media-content, .sharing .media-center .media-content {
+      transition: 0.2s; }
+    .sharing .media:hover .media-content, .sharing .media-right:hover .media-content, .sharing .media-center:hover .media-content {
+      transform: translateY(-20%); }
+
+.post-comments {
+  max-width: 600px; }
+
+.comment {
+  margin: 5px auto;
+  padding: 10px;
+  background: #eee; }
+  .comment .comment {
+    margin-top: 15px;
+    background: #e2e2e2; }
+  .comment img {
+    border-radius: 60px 60px 60px 60px; }
+  .comment h2 {
+    font-size: 1em; }
+
+/*# sourceMappingURL=main.css.map */
