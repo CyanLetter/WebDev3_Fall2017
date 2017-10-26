@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Web Dev 3</title>
+
+		<meta name="description" content="Lecture for Web Dev 3">
+		<meta name="author" content="Dakota Ling">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai-sublime.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Week 4</h1>
+					<h3>Bootstrap</h3>
+				</section>
+
+				<section>
+					<section>
+						<h2>What is Bootstrap</h2>
+						<ul>
+							<li>A front-end framework.</li>
+							<li>First developed at twitter.</li>
+							<li>Provides a system of css classes, components, and examples.</li>
+							<li>Some javascript components and themes.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Why</h2>
+						<ul>
+							<li>Great example of CSS components</li>
+							<li>Quick, solid foundation</li>
+							<li>Consistent appearance</li>
+							<li>Opinionated CSS reset</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Bootstrap 4</h2>
+						<ul>
+							<li>The latest version</li>
+							<li>Flexbox focused</li>
+							<li>Lots of sites using older versions</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>Installing</h2>
+					<p>Check the <a href="http://getbootstrap.com/docs/4.0/getting-started/introduction/">getting started</a> page.</p>
+					<p>From the CDN:</p>
+					<pre><code>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+					</code></pre>
+				</section>
+
+				<section>
+					<section>
+						<h2>Utilities</h2>
+						<p><a href="https://getbootstrap.com/docs/4.0/utilities/">Documentation</a></p>
+						<p>Small helper classes to change styles in small ways.</p>
+					</section>
+					<section>
+						<h2>Color</h2>
+						<p>Colors are defined by purpose, e.g. 'danger' instead of 'red'</p>
+					</section>
+					<section>
+						<h2>Spacing</h2>
+						<p>Spacing is set through classes for consistency, much like h1 tags.</p>
+						<p>Range from .25rem to 3rem.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Layout</h2>
+						<p><a href="https://getbootstrap.com/docs/4.0/layout/overview/">Documentation</a></p>
+						<p>Systems to fundamentally define the page structure.</p>
+					</section>
+					<section>
+						<h2>Containers</h2>
+						<p>Everything in the grid goes in a container.</p>
+						<p>Can be fluid or fixed.</p>
+					</section>
+					<section>
+						<h2>12 Column Grid</h2>
+						<p>12 equal columns.</p>
+						<p>Each horizontal section is a row.</p>
+						<p>Can be defined for different breakpoints.</p>
+					</section>
+					<section>
+						<h2>Media Object</h2>
+						<p>Bootstrap implementation of the same thing we talked about last week.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Components</h2>
+						<p><a href="https://getbootstrap.com/docs/4.0/components/">Documentation</a></p>
+						<p>Prebuilt blocks of code for common functional needs.</p>
+						<p>Some require javascript to work.</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Class Exercise!</h2>
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

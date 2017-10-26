@@ -1,0 +1,5 @@
+Project 1
+
+Pick a startup, kickstarter, or indiegogo project. Basically a small, focused project or product. Using information you gather about your chosen project, build a responsive Bootstrap site promoting the project. At the minimum, this should include a home page showing off the project itself and a page with a sign-up or preorder form.
+
+This should, at its core, be a Bootstrap site. While you are allowed to add your own css and scripts, the site should mostly be built using bootstrap systems. Anything that you create custom should work within that system.
