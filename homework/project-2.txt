@@ -1,0 +1,16 @@
+Create a website for a corporate foundation or social responsibility initiative. The last project was about the little guy, this one is about the major players.
+ 
+Choose a corporate entity that sponsors its own foundation or social responsibility initiative, and create a website that communicates that foundation's activities and goals. These corporate foundation sites have a lot of information to communicate, it is your job to build an accessible, reusable system for presenting that information. Don't pick a site that already looks good - you aren't recreating a site, you're improving one.
+ 
+Examples of corporate foundations include the Coca-Cola Foundation and the 3M Foundation. Most large corporations will have something like this. A list of some of the largest can be found here: foundationcenter.org/findfunders/topfunders/top50giving.html
+
+Whether you can use designs you have made for another class will be handled on a case-by-case basis. What we have learned about UI systems may not fit with what you have designed previously, so be prepared to make changes to better utilize what we have learned in this class.
+ 
+Goals and Notes:
+ - Build a functional website promoting your corporate foundation or initiative.
+ - Use what we have learned about css components to create a consistent UI system.
+ - Build as many templates as you can to make it easy to handle large amounts of information. Structurally, this isn't going to be much different from your typical blog or news site.
+ - Create wireframes and lay out a project architecture ahead of time to keep your development clean and focused.
+ - Use large imagery, video, typography, and animation to breathe life into bland content.
+ - Make sure it is reasonably accessible.
+ - The functionality of the site is more important than the message itself. I am requiring this to be tied to an existing corporate entity so that much of the branding, copywriting, and imagery will have already been created. Draw anything you can from the existing corporate culture to make your life easier - color schemes, fonts, logos, stock images, videos. The idea is to take information that already exists, and cut it into something that people can get excited about.
