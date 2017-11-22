@@ -1,0 +1,47 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #ccc;
+}
+
+.faces-container {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+// SVG Specific
+
+#HeadBase {
+	transition: 0.2s;
+}
+#FaceContainer:hover #HeadBase {
+	fill: #ff0000;
+}
+
+#Mouth {
+	transition: 0.2s;
+}
+
+#FaceContainer:hover #Mouth {
+	d: path("M91.8,197.6c34.8,35.5,53.5-36.6,107.2,0");
+}
