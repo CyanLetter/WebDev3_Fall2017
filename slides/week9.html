@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Web Dev 3</title>
+
+		<meta name="description" content="Lecture for Web Dev 3">
+		<meta name="author" content="Dakota Ling">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai-sublime.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Week 9</h1>
+					<p>Gulp</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Gulp is...</h2>
+						<ul>
+							<li>Javascript</li>
+							<li>Known as a 'build tool' or a 'task runner'</li>
+							<li>It runs tasks that help you build websites</li>
+							<li>Grunt is another build tool</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Gulp can...</h2>
+						<ul>
+							<li>Run tasks to do things like compile sass</li>
+							<li>Tasks are downloaded and installed through npm</li>
+						</ul>
+					</section>
+					<section>
+						<h2>npm is...</h2>
+						<ul>
+							<li>Node Package Manager (hence node_modules)</li>
+							<li>You can download and keep bundles of code up-to-date</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Installing Gulp</h2>
+						<p>The difference between global and local packages</p>
+					</section>
+
+					<section>
+						<h2>Global</h2>
+						<p>Once per machine.</p>
+						<p>This lets you, the user, run gulp.</p>
+						<pre><code class="bash">
+# -g means global
+npm install -g gulp
+						</code></pre>
+						<p>We have already done this</p>
+					</section>
+
+					<section>
+						<h2>Global</h2>
+						<p>Once per project.</p>
+						<p>This lets scripts in the project use gulp.</p>
+						<pre><code class="bash">
+cd path/to/your/project/
+
+# --save-dev means save to package.json
+npm install gulp --save-dev
+						</code></pre>
+						<p>First though, we need a package.json file</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Set up npm</h2>
+						<pre><code class="bash">
+npm init
+						</code></pre>
+<p>This walks you through making a package.json file.</p>
+					</section>
+
+					<section>
+						<p>Now we can install and save local packages.</p>
+						<pre><code class="bash">
+npm install gulp --save-dev
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>gulpfile.js</h2>
+						<p>When you run gulp, it looks for gulpfile.js and runs whatever is in there.</p>
+						<p>Create an empty one now.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Setting up the gulpfile</h2>
+						<p>This is all javascript.</p>
+						<p>Node.js, specifically.</p>
+					</section>
+
+					<section>
+						<p>Point to your local gulp</p>
+						<pre><code class="javascript">
+var gulp = require('gulp');
+						</code></pre>
+						<p>'require' looks for things in node_modules</p>
+					</section>
+
+					<section>
+						<p>Make a simple task</p>
+						<pre><code class="javascript">
+// task name, function body
+gulp.task('hello', function() {
+	console.log('hello world');
+});
+						</code></pre>
+						<p>Just a regular old javascript function</p>
+					</section>
+
+					<section>
+						<p>Real tasks let you define source files and 'pipe' them through to a destination.</p>
+						<pre><code class="javascript">
+gulp.task('hello', function() {
+	return gulp.src('index.html') // source file(s)
+		.pipe(gulp.dest('assets')) // destination folder
+});
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Process Sass</h2>
+						<p>We can pipe our files through gulp-sass</p>
+						<pre><code class="bash">
+npm install gulp-sass --save-dev
+						</code></pre>
+						<pre><code class="javascript">
+var sass = require('gulp-sass');
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Process Sass</h2>
+						<p>We can pipe our files through gulp-sass</p>
+						<pre><code class="javascript">
+gulp.task('sass', function() {
+	return gulp.src('assets/sass/main.scss')
+		.pipe(sass()) // run the sass gulp package
+		.pipe(gulp.dest('assets/css'))
+});
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Globbing</h2>
+						<p>Use stars to grab 'everything', much like css</p>
+						<pre><code class="javascript">
+'assets/sass/main.scss' // just this file
+'assets/sass/*.scss' 	// all scss files
+'assets/sass/**/*.scss' // all scss files in all subfolders
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Watching</h2>
+						<p>Do stuff when a file changes</p>
+						<pre><code class="javascript">
+// files to watch, tasks to run
+gulp.task('default', function() {
+	gulp.watch('assets/sass/*.scss', ['sass']);
+});
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Live Reload</h2>
+						<p>Using browsersync to run a web server and auto-refresh.</p>
+						<pre><code class="bash">
+npm install browser-sync --save-dev
+						</code></pre>
+						<pre><code class="javascript">
+var browserSync = require('browser-sync').create(); // create starts an instance
+						</code></pre>
+					</section>
+
+					<section>
+						<p>Make a browsersync task</p>
+						<pre><code class="javascript">
+gulp.task('browsersync', function() {
+	browserSync.init({ // start the server
+		server: "./" // serve from the project root
+	});
+});
+						</code></pre>
+					</section>
+
+					<section>
+						<p>Add a pipe at the end of the sass task</p>
+						<pre><code class="javascript">
+// the rest of your sass task
+.pipe(browserSync.reload({
+	stream: true
+}));
+						</code></pre>
+					</section>
+
+					<section>
+						<p>Run it from default</p>
+						<pre><code class="javascript">
+gulp.task('default', ['browsersync'], function() {
+	gulp.watch('assets/sass/*.scss', ['sass']);
+});
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Those are the basics</h2>
+						<p>Plenty of other tools and systems to help make your project run smoothly.</p>
+					</section>
+					<section>
+						<p>Some more gulp packages</p>
+						<ul>
+							<li><a href="https://www.npmjs.com/package/gulp-autoprefixer">Autoprefixer</a> - CSS prefixes</li>
+							<li><a href="https://www.npmjs.com/package/gulp-sourcemaps">Sourcemaps</a> - for Chrome Dev Tools</li>
+							<li><a href="https://www.npmjs.com/package/gulp-jshint">jshint</a> - JS code linting</li>
+							<li><a href="https://www.npmjs.com/package/gulp-uglify">Uglify</a> - JS file compression</li>
+							<li><a href="https://www.npmjs.com/package/gulp-concat">concat</a> - combine JS files</li>
+						</ul>
+					</section>
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

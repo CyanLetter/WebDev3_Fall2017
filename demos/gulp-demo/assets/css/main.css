@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #ccc; }
+
+.hello {
+  color: white; }
+  .hello:hover {
+    color: green; }
